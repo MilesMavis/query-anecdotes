@@ -1,5 +1,5 @@
 /* eslint-disable react/react-in-jsx-scope */
-function AnecdoteForm({newAnecdoteMutation}) {
+function AnecdoteForm({ newAnecdoteMutation }) {
   const onCreate = (event) => {
     event.preventDefault();
     const content = event.target.anecdote.value;

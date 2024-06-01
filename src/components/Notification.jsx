@@ -1,4 +1,11 @@
+/* eslint-disable react/react-in-jsx-scope */
+import { useContext } from 'react';
+import NotificationContext from '../NotificationContext';
+
+
 function Notification() {
+  const [message, messageDispatch] = useContext(NotificationContext);
+
   const style = {
     border: 'solid',
     padding: 10,
@@ -6,10 +13,12 @@ function Notification() {
     marginBottom: 5,
   };
 
-  if (true) return null;
+  if (!message) return null;
 
   return (
-    <div style={style} />
+    <div style={style}>
+      {message}
+    </div>
   );
 }
 
